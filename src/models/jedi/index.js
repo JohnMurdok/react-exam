@@ -19,7 +19,14 @@ class Jedi extends Model {
         if(!this.name) {
             return 'Click to add new jedi';
         }
-        return `Master ${this.name} / Lightsaber : ${this.lightsaber}`;
+        return `Master ${this.name}`;
+    }
+
+    displayPower() {
+        if(!this.id) {
+            return `May the force be with you`;
+        }
+        return `Use a ${this.lightsaber} lightsaber`;
     }
 }
 

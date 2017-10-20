@@ -1,4 +1,3 @@
-import React from 'react';
 import ListItem from '../../../core/list/ListItem';
 
 
@@ -8,13 +7,8 @@ import ListItem from '../../../core/list/ListItem';
  */
 class JediListItem extends ListItem {
 
-    render() {
-        const { item } = this.props;
-        return (
-            <div className={`list-item jedi-item ${item.lightsaber}`} onClick={this.handleClick.bind(this)}>
-                <p>{item.displayName()}</p>
-            </div>
-        );
+    getListClass(item) {
+        return `list-item jedi-item ${item.lightsaber}`;   
     }
 }
 

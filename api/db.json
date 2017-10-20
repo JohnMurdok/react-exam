@@ -6,7 +6,7 @@
     },
     {
       "id": 2,
-      "name": "Mace Windu",
+      "name": "Mace Winduz",
       "lightsaber": "green"
     },
     {
@@ -30,10 +30,6 @@
       "name": "Adi Gallia"
     },
     {
-      "id": 8,
-      "name": "Agen Kolar"
-    },
-    {
       "id": 9,
       "name": "Ki-Adi-Mundi23",
       "lightsaber": "blue"
@@ -42,11 +38,6 @@
       "id": 10,
       "name": "Quinlan Vos",
       "lightsaber": "green"
-    },
-    {
-      "lightsaber": "purple",
-      "name": "Obi-wan",
-      "id": 13
     }
   ],
   "sith": [
@@ -57,6 +48,10 @@
     {
       "name": "Sidious",
       "id": 2
+    },
+    {
+      "name": "Dark Vador",
+      "id": 3
     }
   ]
 }

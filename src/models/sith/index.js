@@ -7,6 +7,10 @@ class Sith extends Model {
         }
         return `Dark/${this.name}`;
     }
+
+    displayPower() {
+        return `Unlimited power`;
+    }
 }
 
 Sith.prototype.route = '/sith';

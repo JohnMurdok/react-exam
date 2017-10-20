@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ListHeader from './ListHeader';
 import ListItem from './ListItem';
 import ListFooter from './ListFooter';
 import './list.css';
+import {List} from 'material-ui/List';
+import Divider from 'material-ui/Divider';
 
 /**
  * Basic core list component
  */
-class List extends Component {
+class UIList extends List {
 
     constructor(props) {
         super(props);
@@ -82,7 +84,12 @@ class List extends Component {
      */
     renderItem(item, index) {
         const Item = this.listItemClass;
-        return <Item item={item} key={index} selectItem={this.selectItem.bind(this)}/>
+        return (
+            <div key={index}>
+                <Item item={item} selectItem={this.selectItem.bind(this)}/>
+                <Divider />
+            </div>
+        )
     }
 
     /**
@@ -108,8 +115,8 @@ class List extends Component {
     }
 }
 
-List.propTypes = {
+UIList.propTypes = {
     items  : PropTypes.array
 };
 
-export default List;
+export default UIList;

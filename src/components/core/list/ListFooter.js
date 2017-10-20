@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class ListFooter extends Component {
     constructor(props){
@@ -12,7 +14,6 @@ class ListFooter extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps);
         this.setState({
             item: nextProps.item
         });
@@ -42,10 +43,10 @@ class ListFooter extends Component {
         const buttonValue = item.id ? 'Update' : 'Add';
         return (
             <div className='list-footer'>
-                <input type="text" value={this.state.item.name || ''} onChange={this.handleChange.bind(this)} />
-                <button onClick={this.onUpdateButtonClick.bind(this)}>{buttonValue}</button>
+                <TextField hintText="Name"  value={this.state.item.name || ''} onChange={this.handleChange.bind(this)} />
+                <RaisedButton label={buttonValue} primary={true} onClick={this.onUpdateButtonClick.bind(this)} />
                 {item && item.id ? (
-                <button onClick={this.onDeleteButtonClick.bind(this)}>Remove</button>
+                    <RaisedButton label="Remove" secondary={true} onClick={this.onDeleteButtonClick.bind(this)} />
                 ): ''}
             </div>
         );

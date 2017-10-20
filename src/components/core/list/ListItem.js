@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {ListItem} from 'material-ui/List';
 
 /**
  * ListItem
  */
-class ListItem extends Component {
+class UIListItem extends Component {
 
+    getListClass(item) {
+        return `list-item`;   
+    }
     /**
      * On list item click
      * @param {*} e 
@@ -19,15 +23,18 @@ class ListItem extends Component {
     render() {
         const { item } = this.props;
         return (
-            <div onClick={this.handleClick.bind(this)}>
-                <p>{item.name}</p>
-            </div>
+            <ListItem 
+                className={this.getListClass(item)}
+                primaryText={item.displayName()} 
+                secondaryText={item.displayPower()} 
+                onClick={this.handleClick.bind(this)}
+            />
         );
     }
 }
 
-ListItem.propTypes = {
+UIListItem.propTypes = {
     item  : PropTypes.object.isRequired
 };
 
-export default ListItem;
+export default UIListItem;
