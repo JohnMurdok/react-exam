@@ -6,7 +6,8 @@
     },
     {
       "id": 2,
-      "name": "Mace Windu"
+      "name": "Mace Windu",
+      "lightsaber": "green"
     },
     {
       "id": 3,
@@ -34,11 +35,28 @@
     },
     {
       "id": 9,
-      "name": "Ki-Adi-Mundi"
+      "name": "Ki-Adi-Mundi23",
+      "lightsaber": "blue"
     },
     {
       "id": 10,
-      "name": "Quinlan Vos"
+      "name": "Quinlan Vos",
+      "lightsaber": "green"
+    },
+    {
+      "lightsaber": "purple",
+      "name": "Obi-wan",
+      "id": 13
+    }
+  ],
+  "sith": [
+    {
+      "name": "Darth Maul",
+      "id": 1
+    },
+    {
+      "name": "Sidious",
+      "id": 2
     }
   ]
 }

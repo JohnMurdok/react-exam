@@ -1,0 +1,66 @@
+.list {
+    float:left;
+    position:relative;
+    width: 50%;
+    height:100%;
+}
+
+.list:nth-child(2){
+    float:right;
+}
+.list-container {
+    position:absolute;
+    padding: 2.4rem 0;
+    width: 100%;
+}
+
+.list-header {
+    height: 2.4rem;
+    line-height: 2.4em;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.list-footer {
+    height: 2.4rem;
+    line-height: 2.4em;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.list-header > h3 {
+    margin: 0;
+}
+
+.list-item {
+    width: 100%;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    border-bottom: 1px solid #888;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    background-color: gray;
+    color: white;
+}
+
+.list-item.purple:hover {
+    background-color: purple;
+}
+
+.list-item.green:hover {
+    background-color: green;
+}
+
+.list-item.blue:hover {
+    background-color: blue;
+}
+
+.list-item > p {
+    margin: 0;
+}
